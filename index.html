@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Inscription Pic-Nic Géant YMCA 2026</title>
+<meta name="description" content="Inscris-toi au Pic-Nic Géant YMCA 2026 — Samedi 31 octobre 2026, Parc de Bananjo, Douala. Entrée gratuite.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="YMCA · Branche Douala B">
+<meta property="og:url" content="https://willdesign237-web.github.io/picnic-geant-ymca-2026/">
+<meta property="og:title" content="Pic-Nic Géant YMCA 2026 · Inscris-toi !">
+<meta property="og:description" content="Samedi 31 octobre 2026 dès 13h00 · Parc de Bananjo, à côté de la station OLA · Entrée gratuite. Inscris-toi et découvre ton équipe.">
+<meta property="og:image" content="https://willdesign237-web.github.io/picnic-geant-ymca-2026/apercu.jpg">
+<meta property="og:image:secure_url" content="https://willdesign237-web.github.io/picnic-geant-ymca-2026/apercu.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Pic-Nic Géant YMCA 2026, samedi 31 octobre 2026 au Parc de Bananjo">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://willdesign237-web.github.io/picnic-geant-ymca-2026/apercu.jpg">
+<meta name="theme-color" content="#0F2A17">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Layout : photo de jardin plein écran, une colonne étroite de verre dépoli — en-tête, infos, formulaire, révélation */
+:root{
+  --foret:#0F2A17;
+  --mousse:#2F5A34;
+  --creme:#F6F3EA;
+  --encre:#16241A;
+  --sauge:#6E8A6F;
+  --or:#D8C08A;
+  --verre:rgba(15,42,23,.42);
+  --verre-bord:rgba(246,243,234,.22);
+  --serif:'Cormorant Garamond', 'Times New Roman', Georgia, serif;
+  --sans:'Jost', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color-scheme: dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  min-height:100vh;
+  background-color:var(--foret);
+  color:var(--creme);
+  font-family:var(--sans);
+  font-weight:400;
+  font-size:16px;
+  line-height:1.55;
+  padding:env(safe-area-inset-top,0) 16px env(safe-area-inset-bottom,0);
+  overflow-x:hidden;
+}
+.jardin{position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    linear-gradient(180deg, rgba(8,34,26,.55) 0%, rgba(8,34,26,.45) 35%, rgba(6,28,22,.88) 100%),
+    url("fond.jpg") center/cover no-repeat,
+    var(--mousse);
+}
+
+.wrap{position:relative;z-index:1;max-width:540px;margin:0 auto;padding-block:56px 64px;display:flex;flex-direction:column;gap:32px}
+
+.entete{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px}
+.surtitre{font-size:12px;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:var(--or)}
+h1{margin:0;font-family:var(--serif);font-weight:600;line-height:.95;text-wrap:balance;text-shadow:0 2px 24px rgba(0,0,0,.35)}
+h1 .l1{display:block;font-size:clamp(54px,15vw,84px);letter-spacing:.02em}
+h1 .l2{display:block;font-style:italic;font-weight:500;font-size:clamp(30px,8.5vw,46px);color:var(--or);margin-top:6px}
+.filet{width:56px;height:1px;background:var(--or);opacity:.8}
+.theme{margin:0;max-width:30ch;font-family:var(--serif);font-style:italic;font-size:22px;line-height:1.35;text-wrap:balance}
+.theme cite{display:block;margin-top:8px;font-family:var(--sans);font-style:normal;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--or)}
+
+.panneau{background:var(--verre);border:1px solid var(--verre-bord);border-radius:22px;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+
+.infos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+.info{padding:16px 18px;display:flex;flex-direction:column;gap:2px;min-width:0;border-bottom:1px solid var(--verre-bord)}
+.info:nth-child(odd){border-right:1px solid var(--verre-bord)}
+.info.plein{grid-column:1/-1;border-right:0}
+.info:last-child,.info.fin{border-bottom:0}
+.info small{font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--or)}
+.info strong{font-weight:500;font-size:16px;line-height:1.35}
+
+.carte{background:var(--creme);color:var(--encre);border-radius:22px;padding:32px 24px;display:flex;flex-direction:column;gap:20px;box-shadow:0 30px 80px rgba(0,0,0,.40)}
+.carte h2{margin:0;font-family:var(--serif);font-weight:600;font-size:32px;line-height:1.05;text-wrap:balance}
+.carte p.intro{margin:0;color:#4C5A4E;font-weight:400}
+.teintes{display:flex;gap:8px;align-items:center}
+.teintes i{width:14px;height:14px;border-radius:50%;display:block;box-shadow:inset 0 0 0 1px rgba(22,36,26,.18)}
+
+form{display:flex;flex-direction:column;gap:18px}
+.champ{display:flex;flex-direction:column;gap:6px}
+label{font-weight:500;font-size:14px;letter-spacing:.02em}
+label .opt{font-weight:400;color:var(--sauge)}
+input{font:inherit;font-size:17px;padding:14px 16px;border-radius:12px;border:1px solid #CFCDBF;background:#FFFFFF;color:var(--encre);width:100%;transition:border-color .2s ease, box-shadow .2s ease}
+input::placeholder{color:#9AA39A}
+input:focus{outline:none;border-color:var(--mousse);box-shadow:0 0 0 4px rgba(47,90,52,.15)}
+.aide{font-size:13px;color:var(--sauge)}
+.erreur{margin:0;padding:12px 14px;border-radius:12px;background:#F7E3E1;color:#8A1F17;font-weight:500;font-size:15px}
+button.go{font:inherit;font-weight:500;font-size:16px;letter-spacing:.14em;text-transform:uppercase;padding:17px 20px;border:0;border-radius:12px;background:var(--foret);color:var(--creme);cursor:pointer;min-height:56px;transition:background .2s ease, transform .15s ease}
+button.go:hover{background:var(--mousse)}
+button.go:active{transform:scale(.99)}
+button.go:focus-visible{outline:2px solid var(--or);outline-offset:3px}
+button.go[disabled]{opacity:.7;cursor:wait}
+
+.resultat{background:var(--creme);color:var(--encre);border-radius:22px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.40)}
+.resultat .tete{padding:34px 24px 30px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px}
+.resultat .tete small{font-size:11px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--sauge)}
+.pastille{width:76px;height:76px;border-radius:50%;box-shadow:0 0 0 6px #fff, 0 0 0 7px rgba(22,36,26,.12), 0 12px 30px rgba(0,0,0,.18)}
+.resultat .tete .nom-couleur{font-family:var(--serif);font-weight:600;font-size:clamp(44px,12vw,60px);line-height:1}
+.resultat .tete .salut{font-size:16px;color:#4C5A4E}
+.resultat .corps{padding:0 24px 28px;display:flex;flex-direction:column;gap:14px}
+.resultat .corps p{margin:0}
+.separe{height:1px;background:#E2DFD2}
+.btn-wa{display:flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font-weight:500;font-size:16px;letter-spacing:.04em;padding:16px 20px;border-radius:12px;background:#1F8A4C;color:#fff;min-height:56px}
+.btn-wa:hover{background:#18763F}
+.btn-wa:focus-visible{outline:2px solid var(--foret);outline-offset:3px}
+.attente{padding:14px 16px;border-radius:12px;background:#ECE9DD;color:var(--encre)}
+.conseil{font-size:14px;color:var(--sauge)}
+.lien-retour{background:none;border:0;padding:0;font:inherit;font-size:14px;color:var(--mousse);font-weight:500;text-decoration:underline;text-underline-offset:3px;cursor:pointer;align-self:center}
+
+.programme{padding:18px 20px;text-align:center}
+.programme small{display:block;font-size:11px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--or);margin-bottom:6px}
+.programme p{margin:0;font-family:var(--serif);font-size:21px;font-style:italic}
+footer{text-align:center;font-size:13px;letter-spacing:.06em;color:rgba(246,243,234,.8)}
+footer a{color:var(--creme)}
+
+.apparait{animation:monte .6s ease both}
+@keyframes monte{from{transform:translateY(10px);opacity:.3}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.apparait{animation:none}input,button.go{transition:none}}
+@media (max-width:380px){.infos{grid-template-columns:1fr}.info:nth-child(odd){border-right:0}}
+</style>
+</head>
+<body>
+<div class="jardin" aria-hidden="true"></div>
+
+<main class="wrap">
+  <header class="entete">
+    <span class="surtitre">YMCA · Branche Douala B</span>
+    <h1><span class="l1">Pic-Nic Géant</span><span class="l2">Édition 2026</span></h1>
+    <span class="filet" aria-hidden="true"></span>
+    <blockquote class="theme">
+      « Qu'il est beau pour des frères et sœurs de demeurer ensemble »
+      <cite>Psaume 133 : 1</cite>
+    </blockquote>
+  </header>
+
+  <div class="infos panneau">
+    <div class="info"><small>Date</small><strong>Samedi 31 octobre 2026</strong></div>
+    <div class="info"><small>Heure</small><strong>À partir de 13h00</strong></div>
+    <div class="info plein"><small>Lieu</small><strong>Parc de Bananjo, à côté de la station OLA</strong></div>
+    <div class="info fin"><small>Participation</small><strong>Gratuite</strong></div>
+    <div class="info fin"><small>Infoline</small><strong>699 42 49 34</strong></div>
+  </div>
+
+  <section class="carte" id="bloc-form" aria-labelledby="titre-form">
+    <div class="teintes" aria-hidden="true">
+      <i style="background:#1E4FD8"></i><i style="background:#E11D2E"></i><i style="background:#7C3AED"></i><i style="background:#FFFFFF"></i><i style="background:#EC4899"></i>
+    </div>
+    <h2 id="titre-form">Réserve ta place</h2>
+    <p class="intro">Chaque participant rejoint l'une des cinq équipes du pic-nic : bleu, rouge, violet, blanc ou rose. Ta couleur t'est attribuée à l'inscription, avec le lien du groupe WhatsApp de ton équipe.</p>
+    <form id="form" novalidate>
+      <div class="champ">
+        <label for="nom">Nom et prénom</label>
+        <input id="nom" name="nom" type="text" autocomplete="name" maxlength="120" required placeholder="Ex. Ngo Bassa Marie">
+      </div>
+      <div class="champ">
+        <label for="tel">Numéro WhatsApp</label>
+        <input id="tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" maxlength="20" required placeholder="Ex. 6 99 42 49 34">
+        <span class="aide">Une inscription par numéro.</span>
+      </div>
+      <div class="champ">
+        <label for="quartier">Quartier <span class="opt">(facultatif)</span></label>
+        <input id="quartier" name="quartier" type="text" maxlength="120" placeholder="Ex. Bonamoussadi">
+      </div>
+      <p class="erreur" id="erreur" role="alert" hidden></p>
+      <button class="go" id="envoyer" type="submit">Je m'inscris</button>
+    </form>
+  </section>
+
+  <section class="resultat apparait" id="bloc-resultat" aria-live="polite" hidden>
+    <div class="tete">
+      <small id="etiquette">Ton équipe</small>
+      <span class="pastille" id="pastille" aria-hidden="true"></span>
+      <div class="nom-couleur" id="nom-couleur">Bleu</div>
+      <div class="salut" id="salut"></div>
+    </div>
+    <div class="corps">
+      <div class="separe" aria-hidden="true"></div>
+      <p id="message"></p>
+      <a class="btn-wa" id="btn-wa" href="#" target="_blank" rel="noopener" hidden>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.7-5A8.5 8.5 0 1 1 8 19.3L3 21z"/><path d="M9 10c.5 2 2 3.5 4 4l1.2-1.2 2 1-.5 1.5c-3.6.3-7.3-3.4-7-7l1.5-.5 1 2L9 10z"/></svg>
+        <span id="btn-wa-texte">Rejoindre le groupe WhatsApp</span>
+      </a>
+      <p class="attente" id="attente" hidden>Le lien du groupe WhatsApp de ton équipe sera bientôt disponible. Reviens sur cette page avec le même numéro, ou appelle l'infoline au <strong>699 42 49 34</strong>.</p>
+      <p class="conseil">Le jour J, viens habillé(e) aux couleurs de ton équipe.</p>
+      <button class="lien-retour" id="autre" type="button">Inscrire une autre personne</button>
+    </div>
+  </section>
+
+  <div class="programme panneau">
+    <small>Au programme</small>
+    <p>Louange · Jeux · Message · Prière · Casse-croûte</p>
+  </div>
+
+  <footer>Organisé par la YMCA, branche Douala B · Infoline <a href="tel:+237699424934">699 42 49 34</a></footer>
+</main>
+
+<script>
+(function(){
+  var SUPABASE_URL = 'https://cfxzkgdmyvwxeaonkoet.supabase.co';
+  var SUPABASE_KEY = 'sb_publishable_T5bKxmOwpRcG37JsvR7N1w_RycK8Nh6';
+
+  var form = document.getElementById('form');
+  var btn = document.getElementById('envoyer');
+  var err = document.getElementById('erreur');
+  var blocForm = document.getElementById('bloc-form');
+  var blocRes = document.getElementById('bloc-resultat');
+
+  function afficherErreur(t){ err.textContent = t; err.hidden = false; }
+
+  function afficherResultat(r){
+    document.getElementById('pastille').style.background = r.couleur_hex;
+    document.getElementById('etiquette').textContent = r.deja_inscrit ? 'Déjà inscrit(e) · Ton équipe' : 'Inscription confirmée · Ton équipe';
+    document.getElementById('nom-couleur').textContent = r.couleur_nom;
+    document.getElementById('salut').textContent = 'Bienvenue, ' + r.nom;
+    document.getElementById('message').textContent = r.deja_inscrit
+      ? 'Ce numéro est déjà inscrit. Ton équipe reste la même : ' + r.couleur_nom.toLowerCase() + '.'
+      : 'Tu fais partie de l\'équipe ' + r.couleur_nom + '. Rejoins ton groupe pour recevoir les informations de ton équipe.';
+    var wa = document.getElementById('btn-wa');
+    var att = document.getElementById('attente');
+    if (r.whatsapp_url) {
+      wa.href = r.whatsapp_url;
+      document.getElementById('btn-wa-texte').textContent = 'Rejoindre le groupe ' + r.couleur_nom;
+      wa.hidden = false; att.hidden = true;
+    } else {
+      wa.hidden = true; att.hidden = false;
+    }
+    blocForm.hidden = true;
+    blocRes.hidden = false;
+    blocRes.classList.remove('apparait'); void blocRes.offsetWidth; blocRes.classList.add('apparait');
+    blocRes.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    err.hidden = true;
+    var nom = form.nom.value.trim();
+    var tel = form.tel.value.replace(/[^0-9]/g, '');
+    var quartier = form.quartier.value.trim();
+    if (nom.length < 2) { afficherErreur('Indique ton nom et ton prénom.'); form.nom.focus(); return; }
+    if (tel.indexOf('237') === 0 && tel.length === 12) tel = tel.slice(3);
+    if (tel.length < 8 || tel.length > 15) { afficherErreur('Ce numéro ne semble pas valide. Exemple : 6 99 42 49 34.'); form.tel.focus(); return; }
+
+    btn.disabled = true; btn.textContent = 'Inscription en cours…';
+    fetch(SUPABASE_URL + '/rest/v1/rpc/picnic_inscrire', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'apikey': SUPABASE_KEY },
+      body: JSON.stringify({ p_nom: nom, p_telephone: tel, p_quartier: quartier || null })
+    }).then(function(res){
+      return res.json().then(function(data){ return { ok: res.ok, data: data }; });
+    }).then(function(r){
+      if (!r.ok) {
+        var m = (r.data && r.data.message) || '';
+        if (m.indexOf('TELEPHONE_INVALIDE') > -1) afficherErreur('Ce numéro ne semble pas valide. Exemple : 6 99 42 49 34.');
+        else if (m.indexOf('NOM_INVALIDE') > -1) afficherErreur('Indique ton nom et ton prénom.');
+        else afficherErreur('L\'inscription n\'a pas abouti. Réessaie dans un instant ou appelle le 699 42 49 34.');
+        return;
+      }
+      afficherResultat(r.data);
+    }).catch(function(){
+      afficherErreur('Connexion impossible. Vérifie ta connexion Internet et réessaie.');
+    }).then(function(){
+      btn.disabled = false; btn.textContent = 'Je m\'inscris';
+    });
+  });
+
+  document.getElementById('autre').addEventListener('click', function(){
+    form.reset();
+    blocRes.hidden = true;
+    blocForm.hidden = false;
+    form.nom.focus();
+  });
+})();
+</script>
+</body>
+</html>
