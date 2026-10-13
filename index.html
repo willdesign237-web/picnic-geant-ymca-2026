@@ -4,18 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Inscription Pic-Nic Géant YMCA 2026</title>
-<meta name="description" content="Inscris-toi au Pic-Nic Géant YMCA 2026 — Samedi 31 octobre 2026, Parc de Bananjo, Douala. Entrée gratuite.">
+<meta name="description" content="Inscris-toi au Pic-Nic Géant YMCA 2026 — Samedi 31 octobre 2026, Parc de Bonanjo, Douala. Entrée gratuite.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="YMCA · Branche Douala B">
 <meta property="og:url" content="https://willdesign237-web.github.io/picnic-geant-ymca-2026/">
 <meta property="og:title" content="Pic-Nic Géant YMCA 2026 · Inscris-toi !">
-<meta property="og:description" content="Samedi 31 octobre 2026 dès 13h00 · Parc de Bananjo, à côté de la station OLA · Entrée gratuite. Inscris-toi et découvre ton équipe.">
+<meta property="og:description" content="Samedi 31 octobre 2026 dès 13h00 · Parc de Bonanjo, à côté de la station OLA · Entrée gratuite. Inscris-toi et découvre ton équipe.">
 <meta property="og:image" content="https://willdesign237-web.github.io/picnic-geant-ymca-2026/apercu.jpg">
 <meta property="og:image:secure_url" content="https://willdesign237-web.github.io/picnic-geant-ymca-2026/apercu.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Pic-Nic Géant YMCA 2026, samedi 31 octobre 2026 au Parc de Bananjo">
+<meta property="og:image:alt" content="Pic-Nic Géant YMCA 2026, samedi 31 octobre 2026 au Parc de Bonanjo">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://willdesign237-web.github.io/picnic-geant-ymca-2026/apercu.jpg">
@@ -93,6 +93,13 @@ input{font:inherit;font-size:17px;padding:14px 16px;border-radius:12px;border:1p
 input::placeholder{color:#9AA39A}
 input:focus{outline:none;border-color:var(--mousse);box-shadow:0 0 0 4px rgba(47,90,52,.15)}
 .aide{font-size:13px;color:var(--sauge)}
+fieldset{border:0;margin:0;padding:0;min-width:0;display:flex;flex-direction:column;gap:8px}
+legend{font-weight:500;font-size:14px;letter-spacing:.02em;padding:0;margin-bottom:8px}
+.choix{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.choix label{display:flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:12px 14px;border:1px solid #CFCDBF;border-radius:12px;background:#fff;cursor:pointer;font-size:16px;font-weight:500;transition:border-color .2s ease, background .2s ease}
+.choix input{width:18px;height:18px;margin:0;padding:0;accent-color:var(--foret)}
+.choix label:has(input:checked){border-color:var(--foret);background:#EEF3EC;box-shadow:0 0 0 1px var(--foret)}
+.choix label:has(input:focus-visible){outline:2px solid var(--or);outline-offset:2px}
 .erreur{margin:0;padding:12px 14px;border-radius:12px;background:#F7E3E1;color:#8A1F17;font-weight:500;font-size:15px}
 button.go{font:inherit;font-weight:500;font-size:16px;letter-spacing:.14em;text-transform:uppercase;padding:17px 20px;border:0;border-radius:12px;background:var(--foret);color:var(--creme);cursor:pointer;min-height:56px;transition:background .2s ease, transform .15s ease}
 button.go:hover{background:var(--mousse)}
@@ -145,7 +152,7 @@ footer a{color:var(--creme)}
   <div class="infos panneau">
     <div class="info"><small>Date</small><strong>Samedi 31 octobre 2026</strong></div>
     <div class="info"><small>Heure</small><strong>À partir de 13h00</strong></div>
-    <div class="info plein"><small>Lieu</small><strong>Parc de Bananjo, à côté de la station OLA</strong></div>
+    <div class="info plein"><small>Lieu</small><strong>Parc de Bonanjo, à côté de la station OLA</strong></div>
     <div class="info plein"><small>Dress code</small><strong>T-shirt blanc + jean</strong></div>
     <div class="info fin"><small>Participation</small><strong>Gratuite</strong></div>
     <div class="info fin"><small>Infoline</small><strong>699 42 49 34</strong></div>
@@ -166,6 +173,17 @@ footer a{color:var(--creme)}
         <label for="tel">Numéro WhatsApp</label>
         <input id="tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" maxlength="20" required placeholder="Ex. 6 99 42 49 34">
         <span class="aide">Une inscription par numéro.</span>
+      </div>
+      <fieldset>
+        <legend>Es-tu membre de l'UCJG ?</legend>
+        <div class="choix">
+          <label for="membre-oui"><input id="membre-oui" type="radio" name="membre" value="oui"> Oui</label>
+          <label for="membre-non"><input id="membre-non" type="radio" name="membre" value="non"> Non</label>
+        </div>
+      </fieldset>
+      <div class="champ" id="champ-union" hidden>
+        <label for="union">Ton union locale</label>
+        <input id="union" name="union" type="text" maxlength="120" placeholder="Ex. Union de Bonamoussadi">
       </div>
       <div class="champ">
         <label for="quartier">Quartier <span class="opt">(facultatif)</span></label>
@@ -217,6 +235,15 @@ footer a{color:var(--creme)}
 
   function afficherErreur(t){ err.textContent = t; err.hidden = false; }
 
+  var champUnion = document.getElementById('champ-union');
+  function majUnion(){
+    var oui = document.getElementById('membre-oui').checked;
+    champUnion.hidden = !oui;
+    if (!oui) form.union.value = '';
+  }
+  document.getElementById('membre-oui').addEventListener('change', majUnion);
+  document.getElementById('membre-non').addEventListener('change', majUnion);
+
   function afficherResultat(r){
     document.getElementById('pastille').style.background = r.couleur_hex;
     document.getElementById('etiquette').textContent = r.deja_inscrit ? 'Déjà inscrit(e) · Ton équipe' : 'Inscription confirmée · Ton équipe';
@@ -250,11 +277,17 @@ footer a{color:var(--creme)}
     if (tel.indexOf('237') === 0 && tel.length === 12) tel = tel.slice(3);
     if (tel.length < 8 || tel.length > 15) { afficherErreur('Ce numéro ne semble pas valide. Exemple : 6 99 42 49 34.'); form.tel.focus(); return; }
 
+    var membreChoix = form.querySelector('input[name="membre"]:checked');
+    if (!membreChoix) { afficherErreur('Indique si tu es membre de l\'UCJG.'); document.getElementById('membre-oui').focus(); return; }
+    var membre = membreChoix.value === 'oui';
+    var unionLocale = form.union.value.trim();
+    if (membre && unionLocale.length < 2) { afficherErreur('Indique ton union locale.'); form.union.focus(); return; }
+
     btn.disabled = true; btn.textContent = 'Inscription en cours…';
-    fetch(SUPABASE_URL + '/rest/v1/rpc/picnic_inscrire', {
+    fetch(SUPABASE_URL + '/rest/v1/rpc/picnic_inscrire_v2', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'apikey': SUPABASE_KEY },
-      body: JSON.stringify({ p_nom: nom, p_telephone: tel, p_quartier: quartier || null })
+      body: JSON.stringify({ p_nom: nom, p_telephone: tel, p_membre_ucjg: membre, p_union_locale: membre ? unionLocale : null, p_quartier: quartier || null })
     }).then(function(res){
       return res.json().then(function(data){ return { ok: res.ok, data: data }; });
     }).then(function(r){
@@ -262,6 +295,8 @@ footer a{color:var(--creme)}
         var m = (r.data && r.data.message) || '';
         if (m.indexOf('TELEPHONE_INVALIDE') > -1) afficherErreur('Ce numéro ne semble pas valide. Exemple : 6 99 42 49 34.');
         else if (m.indexOf('NOM_INVALIDE') > -1) afficherErreur('Indique ton nom et ton prénom.');
+        else if (m.indexOf('MEMBRE_REQUIS') > -1) afficherErreur('Indique si tu es membre de l\'UCJG.');
+        else if (m.indexOf('UNION_REQUISE') > -1) afficherErreur('Indique ton union locale.');
         else afficherErreur('L\'inscription n\'a pas abouti. Réessaie dans un instant ou appelle le 699 42 49 34.');
         return;
       }
@@ -275,6 +310,7 @@ footer a{color:var(--creme)}
 
   document.getElementById('autre').addEventListener('click', function(){
     form.reset();
+    champUnion.hidden = true;
     blocRes.hidden = true;
     blocForm.hidden = false;
     form.nom.focus();
